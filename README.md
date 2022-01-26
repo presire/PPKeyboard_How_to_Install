@@ -1,4 +1,4 @@
-# PinePhone Keyboard Driver Installation for Mobian
+# PinePhone Keyboard Driver Installation for Mobian<br><br>Rev 1.0
 
 <br><br>
 
@@ -26,13 +26,20 @@ Download the source code from the dedicated keyboard driver Github.<br>
 <br>
 
 Edit the driver's Make file.<br>
-If necessary, uncomment "$(OUT)ppkb-i2c-selftest" at the bottom of the make file.<br>
+If you also want to install ppkb-i2c-selftest, uncomment "$(OUT)ppkb-i2c-selftest" at the bottom of the make file.<br>
 
     # Before editing
     all:$(OUT)ppkb-i2c-inputd $(OUT)ppkb-usb-flasher $(OUT)ppkb-usb-debugger $(OUT)fw-stock.bin $(OUT)ppkb-i2c-debugger $(OUT)ppkb-i2c-charger-ctl $(OUT)ppkb-i2c-flasher $(OUT)ppkb-i2c-selftest
     
     # After editing
     all:$(OUT)ppkb-usb-flasher $(OUT)ppkb-usb-debugger $(OUT)fw-stock.bin $(OUT)ppkb-i2c-debugger $(OUT)ppkb-i2c-charger-ctl $(OUT)ppkb-i2c-flasher $(OUT)ppkb-i2c-inputd $(OUT)ppkb-i2c-selftest
+<br>
+
+If you can't be bothered to edit it, <br>
+you can use the Make file in this repository of mine.<br>
+
+    git clone https://github.com/presire/PPKeyboard_How_to_Install.git
+    cp -f PPKeyboard_How_to_Install/Makefile  pinephone-keyboard/
 <br>
 
 Build and install the driver for the dedicated keyboard.<br>
