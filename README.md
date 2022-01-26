@@ -1,6 +1,6 @@
 # PinePhone Keyboard Driver Installation for Mobian
 
-<br>
+<br><br>
 
 # Preface
 
@@ -12,13 +12,11 @@ Please note that it has not been tested on other Linux distributions.<br>
 
 Install the libraries necessary to install the keyboard driver.<br>
 
-    sudo apt install gputils gputils-common gputils-doc sdcc \
-             sdcc-doc sdcc-libraries apache2 apache2-bin \
-             apache2-data apache2-utils libapache2-mod-php7.4 \
-             libapr1 libaprutil1 libaprutil1-dbd-sqlite3 \
-             libaprutil1-ldap php php-common php7.4 php7.4-cli \
-             php7.4-common php7.4-json php7.4-opcache \
-             php7.4-readline ssl-cert
+    sudo apt install gputils gputils-common gputils-doc sdcc sdcc-doc sdcc-libraries \
+                     apache2 apache2-bin apache2-data apache2-utils libapache2-mod-php7.4 \
+                     libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap \
+                     php php-common php7.4 php7.4-cli php7.4-common php7.4-json \
+                     php7.4-opcache php7.4-readline ssl-cert
 <br>
 
 Download the source code from the dedicated keyboard driver Github.<br>
@@ -46,7 +44,7 @@ If ppkb-i2c-inputd is not installed, execute the following command.<br>
 
     make -j $(nproc) OUT=<keyboard driver installation directory> \
                      $(OUT)ppkb-i2c-inputd
-<br>
+<br><br>
 
 # 2. Enabling the PinePhone keyboard
 For Mobian, you need to enable the dedicated keyboard.<br>
@@ -98,6 +96,11 @@ Create a shell script.<br>
 Add execution privileges to shell scripts.<br>
 
     chmod u+x /<keyboard driver installation directory>/PPKeyBoardStart.sh
+<br>
+
+Restart Mobian.
+
+    sudo systemctl reboot
 <br><br>
 
 # 3. Enabling and Disabling the Screen Keyboard
