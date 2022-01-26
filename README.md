@@ -1,3 +1,13 @@
+# PinePhone Keyboard Driver Installation for Mobian
+
+<br>
+
+# Preface
+
+This article is written for <b><u>Mobian</u></b>.<br>
+Please note that it has not been tested on other Linux distributions.<br>
+<br><br>
+
 # 1. Install PinePhone Keyboard Driver 
 
 Install the libraries necessary to install the keyboard driver.<br>
