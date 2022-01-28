@@ -12,11 +12,7 @@ Please note that it has not been tested on other Linux distributions.<br>
 
 Install the libraries necessary to install the keyboard driver.<br>
 
-    sudo apt install gputils gputils-common gputils-doc sdcc sdcc-doc sdcc-libraries \
-                     apache2 apache2-bin apache2-data apache2-utils libapache2-mod-php7.4 \
-                     libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap \
-                     php php-common php7.4 php7.4-cli php7.4-common php7.4-json \
-                     php7.4-opcache php7.4-readline ssl-cert
+    sudo apt install sdcc php
 <br>
 
 Download the source code from the dedicated keyboard driver Github.<br>
