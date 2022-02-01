@@ -1,4 +1,4 @@
-# PinePhone Keyboard Driver Installation for Mobian<br><br>Rev 1.0
+# PinePhone Keyboard Driver Installation for Mobian<br><br>Rev 1.1
 
 <br><br>
 
@@ -39,13 +39,15 @@ you can use the Make file in this repository of mine.<br>
 <br>
 
 Build and install the driver for the dedicated keyboard.<br>
+<u>Don't forget to put a <span style="color:#C00000"><b>/</b></span> <b>(slash)</b> at the end of the installation directory.</u><br>
 
-    make -j $(nproc) OUT=<keyboard driver installation directory> all
+    make -j $(nproc) OUT=/<keyboard driver installation directory>/ all
 <br>
 
 If ppkb-i2c-inputd is not installed, execute the following command.<br>
+<u>Similarly, Don't forget to put a <span style="color:#C00000"><b>/</b></span> <b>(slash)</b> at the end of the installation directory.</u><br>
 
-    make -j $(nproc) OUT=<keyboard driver installation directory> \
+    make -j $(nproc) OUT=/<keyboard driver installation directory>/ \
                      $(OUT)ppkb-i2c-inputd
 <br><br>
 

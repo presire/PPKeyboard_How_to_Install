@@ -1,6 +1,6 @@
 VERSION := $(shell git describe) $(shell git log -1 --format=%cd --date=iso)
 
-OUT ?= build/
+OUT ?= /home/mobian/
 CFLAGS ?= -O2 -g0
 CFLAGS += -DVERSION="\"$(VERSION)\"" -I. -I$(OUT) -Wall -Wno-unused-variable -Wno-unused-function
 
